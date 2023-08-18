@@ -77,7 +77,7 @@
         <h3>Welcome to</h3>
         <h1>ZIA INNOVATION</h1>
         <P>We are comming soon!</P>
-        <P>Check out out <a href="{{route('bms.index')}}">B.M.S</a> System</P>
+        <P>Check Out Our <a href="{{route('bms.index')}}">B.M.S</a> System</P>
 
         {{-- <div class="container"></div> --}}
     </div>
