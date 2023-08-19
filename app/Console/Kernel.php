@@ -2,10 +2,8 @@
 
 namespace App\Console;
 
-use App\Models\chiller;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use App\Models\test_dbs;
 
 class Kernel extends ConsoleKernel
 {
@@ -15,16 +13,6 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule): void
     {
         // $schedule->command('inspire')->hourly();
-        $schedule->call(function () {
-            $load = [0, 20, 40 , 60, 80, 100];
-            $a = rand(1,5);
-
-                chiller::where('id',1)->update(
-            [
-                'compresor_load'=>$load[$a],
-            ]
-            );
-        })->everySecond();
     }
 
     /**
